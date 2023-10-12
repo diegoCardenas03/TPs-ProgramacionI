@@ -64,3 +64,136 @@ for i in range(1, numTriangle + 1):
     for j in range(2 * i - 1, 0, -2): #Hago que los numeros se muestren de forma descendente.
         print(j, end=' ')
     print()"""
+
+
+
+"""12-	Escribir un programa en el que se pregunte al usuario por una frase y una letra, 
+y muestre por pantalla el número de veces que aparece la letra en la frase.""" 
+#Ejercicio 12
+"""frase = input("Ingrese una frase: ")
+letra = input("Ingrese una letra: ")
+letra_encontrada = 0
+
+for i in frase:
+    if i == letra:
+        letra_encontrada += 1
+    
+print(f"La letra {letra} aparece {letra_encontrada} veces en la frase")"""
+
+"""13-	Escribir un programa que muestre el eco de todo lo que el usuario introduzca hasta 
+que el usuario escriba “salir” que terminará."""
+#Ejercicio 13
+"""entrada = input("Ingrese una palabra o numero: ")
+
+while entrada.lower() != "salir":
+    print(entrada)
+    entrada = input("Ingrese una palabra o numero, si quiere salir ingrese salir: ")"""
+
+"""14-	Escriba un programa que pida dos números enteros y escriba qué números son pares y 
+cuáles impares desde el primero hasta el segundo."""
+#Ejercicio 14
+"""num1 = (int(input("Ingrese el primer numero: ")))
+num2 = (int(input("Ingrese el segundo numero: ")))
+
+print(f"Numeros pares entre {num1} y {num2}: ", end= " ")
+for i in range(num1,num2+1):
+    if i % 2 == 0:
+        print(i, end=" ")
+
+print(" ")
+print(f"Numeros impares entre {num1} y {num2}: ", end= " ")
+for i in range(num1,num2+1):
+    if i % 2 != 0:
+        print(i, end=" ")
+
+print(" ")"""
+    
+"""15-	Escriba un programa que pida un número entero mayor que cero y que escriba sus divisores."""
+#Ejercicio 15
+"""num = int(input("Ingrese un número entero mayor que cero: "))
+
+print(f"Los divisores de {num} son:", end= " ")
+for i in range(1,num+1):
+    if num % i == 0:
+        print(i, end= " ")""" 
+
+"""16-	Escriba un programa que pregunte cuántos números se van a introducir, pida esos números y escriba cuántos
+negativos ha introducido."""
+# Ejercicio 16
+"""
+num = int(input("Cuantos numeros desea introducir?: \n"))
+
+# Ingreso de N numeros y conteo de negativos
+numNeg = 0
+for i in range(num):
+    numIn = int(input("Numero "+ str(i+1)+ ": "))
+
+    if numIn < 0:
+        numNeg += 1
+
+print("Se han introducido " + str(numNeg) + " numeros negativos.")
+
+"""
+
+"""17-	Solicitar al usuario que ingrese una frase y luego imprimir un listado de las vocales que aparecen en esa
+frase (sin repetirlas)."""
+# Ejercicio 17
+"""
+vowels = ["a", "e", "i", "o", "u"]
+found_vowels = []
+phrase = input("Ingrese una frase cualquiera: \n").lower()
+
+# Verificando e imprimiendo vocales
+print("Las vocales que contiene la frase son: ")
+for letter in phrase:
+    if letter in vowels and letter not in found_vowels:
+        print(letter)
+        found_vowels.append(letter)
+
+"""
+
+"""18-	Crear un algoritmo que muestre los primeros 10 números de la sucesión de Fibonacci. La sucesión comienza 
+con los números 0 y 1 y, a partir de éstos, cada elemento es la suma de los dos números anteriores en la secuencia:
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55…"""
+
+# Ejercicio 18
+"""
+print("--Fibonacci-- Los primeros 10 numeros de la sucesion de Fibonacci son los siguientes:")
+
+# Primeros numeros (0 y 1)
+num1 = 0
+num2 = 1
+print(num1)  
+print(num2)  
+
+# Demás numeros
+for i in range(8):  
+    next_num = num1 + num2
+    print(next_num)
+    num1, num2 = num2, next_num  
+
+"""
+
+"""19- Escriba un programa que simule una alcancía. El programa solicitará primero una cantidad, que será la 
+cantidad de dinero que queremos ahorrar. A continuación, el programa solicitará una y otra vez las cantidades 
+que se irán ahorrando, hasta que el total ahorrado iguale o supere al objetivo. El programa deberá comprobar 
+que las cantidades ingresadas sean positivas"""
+
+# Ejercicio 19
+"""
+
+amount = float(input("Ingrese la cantidad de dinero que quiere ahorrar: \n"))
+money = 0
+total = 0
+
+while total < amount:
+    money = float(input("Cuanto dinero meterá en la alcancía?: "))
+    if money < 0:
+        print("Ingrese una cantidad positiva!")
+    else:
+        total += money
+        print("DINERO: " + str(total))
+
+print("Felicidades! Ha podido ahorrar lo que se propuso! (Meta: " + str(amount) + ", Dinero ahorrado: " + str(total) + ")" )
+
+"""
