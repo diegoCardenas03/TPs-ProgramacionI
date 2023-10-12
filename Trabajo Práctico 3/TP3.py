@@ -64,3 +64,56 @@ for i in range(1, numTriangle + 1):
     for j in range(2 * i - 1, 0, -2): #Hago que los numeros se muestren de forma descendente.
         print(j, end=' ')
     print()"""
+    
+
+
+
+"""12-	Escribir un programa en el que se pregunte al usuario por una frase y una letra, 
+y muestre por pantalla el número de veces que aparece la letra en la frase.""" 
+#Ejercicio 12
+"""frase = input("Ingrese una frase: ")
+letra = input("Ingrese una letra: ")
+letra_encontrada = 0
+
+for i in frase:
+    if i == letra:
+        letra_encontrada += 1
+    
+print(f"La letra {letra} aparece {letra_encontrada} veces en la frase")"""
+
+"""13-	Escribir un programa que muestre el eco de todo lo que el usuario introduzca hasta 
+que el usuario escriba “salir” que terminará."""
+#Ejercicio 13
+"""entrada = input("Ingrese una palabra o numero: ")
+
+while entrada.lower() != "salir":
+    print(entrada)
+    entrada = input("Ingrese una palabra o numero, si quiere salir ingrese salir: ")"""
+
+"""14-	Escriba un programa que pida dos números enteros y escriba qué números son pares y 
+cuáles impares desde el primero hasta el segundo."""
+#Ejercicio 14
+"""num1 = (int(input("Ingrese el primer numero: ")))
+num2 = (int(input("Ingrese el segundo numero: ")))
+
+print(f"Numeros pares entre {num1} y {num2}: ", end= " ")
+for i in range(num1,num2+1):
+    if i % 2 == 0:
+        print(i, end=" ")
+
+print(" ")
+print(f"Numeros impares entre {num1} y {num2}: ", end= " ")
+for i in range(num1,num2+1):
+    if i % 2 != 0:
+        print(i, end=" ")
+
+print(" ")"""
+    
+"""15-	Escriba un programa que pida un número entero mayor que cero y que escriba sus divisores."""
+#Ejercicio 15
+"""num = int(input("Ingrese un número entero mayor que cero: "))
+
+print(f"Los divisores de {num} son:", end= " ")
+for i in range(1,num+1):
+    if num % i == 0:
+        print(i, end= " ")""" 
