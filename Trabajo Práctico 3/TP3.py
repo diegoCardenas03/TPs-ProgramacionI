@@ -198,3 +198,136 @@ while total < amount:
 print("Felicidades! Ha podido ahorrar lo que se propuso! (Meta: " + str(amount) + ", Dinero ahorrado: " + str(total) + ")" )
 
 """
+# Ejercicio 20
+""""
+n = 1
+total = 0
+
+while(n!=0):
+
+    num=int(input("Ingrese un el numero a sumar o 0 si desea dejar de sumar\n"))
+
+    if (num!=0):
+        total+=num
+    
+    elif(num==0):
+        n=0
+        print(" ")
+        print("Ingreso 0")
+    
+    print(" ")
+
+print ( "La suma de los numeros ingresados anteriormente es: ",total)
+
+"""
+# Ejercicio 21
+"""
+n = 1
+big_num = 0
+
+while(n!=0):
+
+    num=int(input("Ingrese numeros positivos o 0 para salir\n"))
+
+    if (num>big_num):
+        big_num = num
+    
+    elif(num<0):
+        print(" ")
+        print("El numero ingresado es negativo, no es valido, intente nuevamente ")
+
+    elif(num==0):
+        n=0
+        print(" ")
+        print("Ingreso 0")
+    
+    print(" ")
+
+print ( "El numero mas grande es: ",big_num)
+
+"""
+# Ejercicio 22
+"""
+j = 0
+
+while(j != -1):
+    print(" ")
+    num=input("Ingrese un numero positivo o -1 si desea salir\n")
+    total = 0
+
+    if(int(num)>0):
+        
+        for n in num:
+            total+=int(n)
+        print(" ")
+        print("La suma de los digitos de ",num," es igual a: ",total) 
+    elif(int(num)==-1):
+        j = -1
+        print(" ")
+        print("Ingreso -1, saliendo...")
+    else:
+        print(" ")
+        print("valor ingresado no valido intente nuevamente")
+
+"""
+# Ejercicio 23 y 24
+"""
+n = 1
+total = 0.0
+
+
+while(n!=0):
+
+    num=float(input("Ingrese el monto a agregar a la cuenta o 0 para salir\n"))
+
+    if (num>0):
+        total += num
+    
+    elif(num<0):
+        print(" ")
+        print("El numero ingresado es negativo, no es valido, intente nuevamente ")
+
+    elif(num==0):
+        n=0
+        print(" ")
+        print("Ingreso 0")
+    
+    print(" ")
+
+if (total>1000):
+    print(" ")
+    print ("el monto total supera los 1000$, por lo que se le aplica un descuento del 10% ")
+    discounted_total=total-total*0.10
+    print("monto total es: ",total,"$  y con descuento es: ",discounted_total,"$")
+else:
+    print(" ")
+    print ("el monto total no supera los 1000$, no se le aplica el descuento")
+    print("el monto total es: ",total,"$")
+
+
+
+
+
+"""
+# Ejercicio 25
+"""
+total = 1
+j=1
+
+while j !=0:
+
+    num=int(input("Ingrese un numero positivo entero \n"))
+
+
+    if num>=0:
+        for n in range(1,num+1):
+            total*=n
+        j=0
+    else:
+        print(" ")
+        print("El valor ingresado no es valido, intente nuevamente") 
+
+print(" ")
+print("el factorial de ",num," es : ",total)
+
+"""
