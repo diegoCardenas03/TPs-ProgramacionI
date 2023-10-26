@@ -1,5 +1,36 @@
 import math
 
+# Funcion verificacion dni (ejercicio 1)
+def dni_verification(document):
+    if (len(document) == 7) or (len(document) == 8):
+        valid = True
+    else:
+        valid = False
+    return valid
+
+# Funcion verificacion largo ultima palabra de un string (ejercicio 2)
+def last_word_lenght(w_list):
+    last_word = w_list[-1]
+    l_w_length = len(last_word)
+
+    return l_w_length
+
+# Funcion para ingresar y verificar nombre del integrante (ejercicio 3)
+def name_verification(m_name):
+    valid_name = True
+    if (len(m_name) < 2) or (len(m_name) > 3):
+        valid_name = False
+    
+    return valid_name
+
+# Funcion para generar el identificador del integrante (ejercicio 3)
+def member_id_generator(m_name, dni):
+    first_name = str(m_name[0]).replace(',', '').strip().capitalize()
+    last_name_length = str(len(m_name[-1]))
+    first_numbers_dni = str(dni[0:3])
+    member_id = str(first_name + last_name_length + first_numbers_dni)
+    return member_id
+
 def is_multiple(a, b):
     if a % b == 0:
         return print('El primer número ingresado es múltiplo del segundo.')
