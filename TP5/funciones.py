@@ -75,7 +75,7 @@ def login(user,password, attempt):
 def vector_magnitude(a,b,c):
     magnitude = math.sqrt(a**2 + b**2 + c**2)
     print(f"La magnitud de un vector que tiene componentes {a,b,c} es {abs(magnitude)}")
- 
+
 #Numero primo TP5-Ej14  
 def prime_number(number):
     prime_numb = True
