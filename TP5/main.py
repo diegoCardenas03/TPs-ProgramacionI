@@ -169,6 +169,83 @@ while(True):
         intentos += 1
         print("intento numero: " + str(intentos))"""
 
+#Ejercicio 10
+"""13) Escribir una función que aplique un descuento a un precio. Esta función tiene que recibir un
+diccionario con los precios y porcentajes del carrito de compra, aplicar los descuentos a los
+productos del carrito y devolver el precio final de la compra"""
+
+"""shopping_cart = {}
+discounts = {}
+
+while True:
+
+    product = input("Ingrese el producto o fin para dejar de cargar productos: \n ")
+
+    if product.lower() == "fin":
+
+        break
+
+    while True:
+
+        prize = float(input("Ingrese el precio del producto: \n"))
+
+        if prize >0: 
+
+            shopping_cart[product] = prize
+            break
+
+        else:
+            print("el precio no puede ser 0 o negativo")
+
+
+
+while True:
+
+    product = input("Ingrese el producto con descuento o fin para dejar de cargar descuentos \n")
+
+    if product.lower() == "fin":
+
+        break
+
+    while True:
+
+        num = float(input("Ingrese el porcentaje de descuento para el producto: \n"))
+
+        if num >0: 
+
+            discounts[product] = num
+            break
+
+        else:
+            
+            print("el descuento no puede ser 0 o negativo")
+
+total_prize = apply_discount(shopping_cart, discounts)
+print(f"Precio total con descuento: {total_prize}")
+"""
+
+#Ejercicio 11
+"""Escribir una función que reciba otra función y una lista, y devuelva otra lista con el resultado de
+aplicar la función dada a cada uno de los elementos de la lista."""
+"""original_list = [1, 2, 3, 4, 5]
+
+result = apply_function_to_list(square, original_list)
+print(f"lista original {original_list}")
+print(f"lista con los resultados de los numeros al cuadrado {result}")"""  
+
+
+
+#Ejercicio 12
+"""Escribir una función que reciba una frase y devuelva un diccionario con las palabras que contiene y
+su longitud."""
+
+"""phrase="Pepito saludo a Juanito"
+
+result = word_length_dict(phrase)
+
+print(result)
+"""
+
 
 """13.	Escribir una función que calcule el módulo de un vector. 
 |m| = √(a^2 + b^2 + c^2)"""

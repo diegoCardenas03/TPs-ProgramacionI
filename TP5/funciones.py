@@ -96,4 +96,44 @@ def factorial(number):
         factorial *= n
         
     print(f"El factorial de {number} es {factorial}")
-         
+        
+
+#ej 10
+def apply_discount(shopping_cart, discounts):
+    final_prize= 0
+    
+
+    for product, prize in shopping_cart.items():
+
+        if product in discounts:
+
+            discount = discounts[product]
+            discount_prize = prize * (1 - discount / 100)
+            final_prize += discount_prize
+
+        else:
+
+            final_prize += prize
+
+    return final_prize
+
+#ej 11
+def apply_function_to_list(func, input_list):
+    result = []
+    for element in input_list:
+        result.append(func(element))
+    return result
+
+#ej 11
+def square(x):
+    return x ** 2
+
+#ej 12
+def word_length_dict(phrase):
+    words = phrase.split()
+    result = {}
+
+    for word in words:
+        result[word] = len(word)
+
+    return result
