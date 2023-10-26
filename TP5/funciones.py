@@ -38,3 +38,31 @@ def login(user,password, attempt):
     else:
         attempt += 1
         return False
+
+
+#Numero primo TP5-Ej13    
+def vector_magnitude(a,b,c):
+    magnitude = math.sqrt(a**2 + b**2 + c**2)
+    print(f"La magnitud de un vector que tiene componentes {a,b,c} es {abs(magnitude)}")
+ 
+#Numero primo TP5-Ej14  
+def prime_number(number):
+    prime_numb = True
+    count = 0
+    for i in range(1, number+1):
+        if number % i == 0:
+            count += 1
+    
+    if count > 2:
+        prime_numb = False
+    
+    return prime_numb
+
+#Factorial TP5-Ej15
+def factorial(number):
+    factorial = 1    
+    for n in range(1, number+1):
+        factorial *= n
+        
+    print(f"El factorial de {number} es {factorial}")
+         
