@@ -1,4 +1,23 @@
 import math
+
+def is_multiple(a, b):
+    if a % b == 0:
+        return print('El primer número ingresado es múltiplo del segundo.')
+    else:
+        return print('El primer número no es múltiplo del segundo')
+
+def avg_temperature(max_temp, min_temp):
+    return (max_temp + min_temp) / 2
+
+def return_wh_spaces(a_string):
+    new_string = ""
+    for character in a_string:
+        if character.isalpha():
+            new_string += character + " "
+        else:
+            new_string += character
+    return new_string
+
 def mayor_menor(number_list):
     el_mayor = number_list[0]
     el_menor = number_list[0]
