@@ -1,5 +1,101 @@
 from funciones import *
 
+import funciones
+
+"""1.	Escribir una función que, dado un número de DNI, retorne True si el número es válido y False si no lo es.
+Para que un número de DNI sea válido debe tener entre 7 y 8 dígitos."""
+# Ejercicio 1
+
+"""
+print("---- Bienvenido ----")
+# Ingreso del numero de documento
+dni = input("** Ingrese su numero de documento (DNI): \n")
+# Verificacion del numero de documento
+valid_id = funciones.dni_verification(dni)
+
+if valid_id == True:
+    print(f"* El numero de documento es válido ({valid_id})")
+else:
+    print(f"* El numero de documento no es válido ({valid_id})")
+"""
+
+"""2.	Escribir una función que, dado un string, retorne la longitud de la última palabra. Se considera que las
+palabras están separadas por uno o más espacios. También podría haber espacios al principio o al final del string 
+pasado por parámetro."""
+# Ejercicio 2
+
+"""
+print("---- Bienvenido ----")
+phrase = input("** Ingrese una palabra o frase: ")
+word_list = phrase.split()
+
+# Verificacion de longitud de la ultima palabra
+last_word_length = funciones.last_word_lenght(word_list)
+
+
+print(f"La longitud de la palabra ingresada, o de la ultima palabra de la frase ingresada es {last_word_length}")
+"""
+
+"""3.	Escribir un programa que permita al usuario obtener un identificador para cada uno de los socios de un club.
+Para eso ingresará nombre completo y número de DNI de cada socio, indicando que finalizará el procesamiento mediante 
+el ingreso de un nombre vacio.
+Precondición: el formato del nombre de los socios será: nombre apellido. Podría ingresarse más de un nombre, en cuyo
+caso será: nombre1, nombre2, apellido. Si un socio tuviera más de un apellido, el usuario solo ingresará uno.
+Se debe validar que el número de DNI tenga 7 u 8 dígitos. En caso contrario, el programa debe dejar al usuario en un
+bucle hasta que ingrese un DNI correcto.
+Por cada socio se debe imprimir su identificador único, el cual estará formado por: el primer nombre, la cantidad de
+letras del apellido y los 3 primeros dígitos de su DNI. Ejemplo:
+-Nombre: María Ines Rosales
+-DNI: 25469648
+-ID -> Maria7254
+"""
+# Ejercicio 3
+"""
+
+print("             ---- SISTEMA DE REGISTRO DE SOCIOS DEL CLUB ---- ")
+print("- A continuación, se le pedirá ingresar los datos de los integrantes, para terminar, ingrese un nombre vacio") 
+
+# Ingreso de los datos
+print("\n*** DATOS DEL INTEGRANTE ***")
+print("* Nombre: Utilice el siguiente formato: nombre, apellido.\n* En caso de tener 2 nombres, el formato es "
++ "el siguiente: primernombre, segundonombre, apellido.\n  Si tiene mas de un apellido, ingrese solo uno:")
+while True:
+
+    # Ingreso nombre
+    member_name = input("Nombre: ")
+    name_parts = member_name.split()
+
+    if name_parts == []:
+        # Si se ingresa un nombre vacío, el programa finaliza
+        break
+    else:
+        # En caso de ingresar un nombre no vacio, verifico que siga el formato
+        valid = funciones.name_verification(name_parts)
+
+        if valid:
+            print(f"* DNI: Ingrese el dni del miembro {name_parts[0]} recuerde que el DNI es valido si tiene 7 u 8 numeros")
+            while True:
+                # Ingreso DNI
+                member_dni = input("DNI: ")
+                # Verifico que el dni sea valido
+                valid_dni = funciones.dni_verification(member_dni)
+                if valid_dni:
+                    # Genero e imprimo el ID del miembro
+                    print("\n        ***** IDENTIFICADOR DE SOCIO GENERADO *****")
+                    id = funciones.member_id_generator(name_parts, member_dni)
+
+                    print(f"NOMBRE: {name_parts[0].replace(',', '').strip().capitalize()} {name_parts[-1].capitalize()}")
+                    print(f"DNI: {member_dni}")
+                    print(f"ID: {id}")
+                    print("\n*** Nuevo integrante ***")
+                    break
+                else:
+                    print("--- DNI invalido, ingreselo nuevamente ---")
+                    continue
+        else:
+            print("--- Nombre invalido, por favor ingreselo nuevamente siguiendo el formato solicitado")
+"""
+
 #  4. Crea un programa que pida dos números enteros al usuario y diga si alguno de ellos es múltiplo del otro.
 # Crea una función que reciba los dos números, y devuelve si el primero es múltiplo del segundo.
 
