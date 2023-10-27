@@ -270,7 +270,7 @@ cantidad total de números leídos en total. Utilizar una o más funciones, seg�
 amount_numbers = 0
 
 while True:
-    number = int(input(f"Ingrese un numero: "))
+    number = int(input(f"Ingrese un numero. Para terminar de ingresar, digite 0 o un numero menor: "))
     if number <= 0:
         break
     else:
@@ -280,6 +280,6 @@ while True:
 for n in number_list:
     Funciones.factorial(n)
     
-print(f"La cantidad de numeros leidos en total es de {amount_numbers} numeros")"""
+print(f"La cantidad de numeros leidos en total y sus respectivos factorales es de {amount_numbers} numeros")"""
 
 
