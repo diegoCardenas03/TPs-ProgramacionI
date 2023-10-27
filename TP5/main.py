@@ -280,6 +280,6 @@ while True:
 for n in number_list:
     Funciones.factorial(n)
     
-print(f"La cantidad de numeros leidos en total y sus respectivos factorales es de {amount_numbers} numeros")"""
+print(f"La cantidad de numeros leidos en total es de {amount_numbers} numeros")"""
 
 
