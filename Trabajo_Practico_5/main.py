@@ -1,5 +1,5 @@
 import sys
-sys.path.append("D:/GIT/Proyectos/Programacion_1_UTN/FUNCIONES")
+sys.path.append("D:/GIT/Proyectos/Programacion_Grupo/FUNCIONES")
 import funciones
 
 """1.  Escribir una función que, dado un número de DNI, retorne True si el número es válido y False si no lo es.
