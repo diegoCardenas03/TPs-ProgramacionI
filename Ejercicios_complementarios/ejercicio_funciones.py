@@ -1,5 +1,5 @@
 import sys
-sys.path.append("D:/GIT/Proyectos/Programacion_1_UTN/FUNCIONES")
+sys.path.append("D:/GIT/Proyectos/Programacion_Grupo/FUNCIONES")
 import funciones
 import random
 
