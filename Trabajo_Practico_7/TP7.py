@@ -19,3 +19,7 @@ for book in dictionary_list:
     print(f"- {book['name']}")
 
 # Pregunto al usuario como desea ordenarlos
+while True:
+    option = input("1) Ordenar en funcion del nombre del autor. \n2) Ordenar en funcion del año de publicacion")
+    if option != 1 or option != 2:
+        print("Ingrese una opcion válida")
