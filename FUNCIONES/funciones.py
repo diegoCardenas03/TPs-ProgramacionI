@@ -297,3 +297,13 @@ def word_length_dict(phrase):
         result[word] = len(word)
 
     return result
+
+# FUNCIONES TRABAJO PRACTICO 7 -------------------------------------------
+def sorting_out(dictionary):
+
+    n = len(dictionary)
+    for i in range(n - 1):
+        for j in range(0, n - i - 1):
+            if dictionary[j]["author"] > dictionary[j + 1]["author"]:
+                dictionary[j], dictionary[j + 1] = dictionary[j + 1], dictionary[j]
+    return dictionary
