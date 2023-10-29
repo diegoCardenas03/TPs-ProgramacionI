@@ -299,11 +299,20 @@ def word_length_dict(phrase):
     return result
 
 # FUNCIONES TRABAJO PRACTICO 7 -------------------------------------------
-def sorting_out(dictionary):
+def by_author(dictionary):
 
     n = len(dictionary)
     for i in range(n - 1):
         for j in range(0, n - i - 1):
             if dictionary[j]["author"] > dictionary[j + 1]["author"]:
+                dictionary[j], dictionary[j + 1] = dictionary[j + 1], dictionary[j]
+    return dictionary
+
+def by_year(dictionary):
+
+    n = len(dictionary)
+    for i in range(n - 1):
+        for j in range(0, n - i - 1):
+            if dictionary[j]["year"] > dictionary[j + 1]["year"]:
                 dictionary[j], dictionary[j + 1] = dictionary[j + 1], dictionary[j]
     return dictionary
