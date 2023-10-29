@@ -24,11 +24,23 @@ for book in dictionary_list:
 
 # Pregunto al usuario como desea ordenarlos
 while True:
-    option = int(input("\n1) Ordenar en funcion del nombre del autor. \n2) Ordenar en funcion del año de publicacion. \n3) Salir\n"))
+    option = int(input("\n1) Ordenar alfabeticamente en funcion del nombre del autor. \n2) Ordenar en funcion del año de publicacion. \n3) Salir\n"))
+    
     if (option < 1) or (option > 3):
         print("Ingrese una opcion válida")
     else:
+        # Si ingreso 1 se ordena por en funcion del nombre del autor
         if option == 1:
-            dictionary_list = funciones.sorting_out(dictionary_list)
+            dictionary_list = funciones.by_author(dictionary_list)
+            print("\n")
             for book in dictionary_list:
-                print(f"- {book['name']}, ({book['year']}) de {book['author']}")
+                print(f"- {book['author']}: {book['name']}, ({book['year']})")
+        # Si ingreso 2 se ordena por año de publicacion
+        elif option == 2:
+            dictionary_list = funciones.by_year(dictionary_list)
+            print("\n")
+            for book in dictionary_list:
+                print(f"- {book['year']}: {book['name']}, de {book['author']}")
+        # Si ingreso 3 el programa finaliza
+        elif option == 3:
+            break
