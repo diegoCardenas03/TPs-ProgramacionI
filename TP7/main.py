@@ -27,8 +27,9 @@ print("Lista ordenada: "+ str(new_word_list))"""
 """3.	Crea una lista de diccionarios, donde cada diccionario contiene información sobre un libro (título, autor,
 año de publicación, etc.). Luego, escribe un programa que ordene la lista de libros en función de un campo 
 específico, como el año de publicación o el autor."""
-
 # Ejercicio 3
+
+"""
 
 # Lista con diccionarios, cada diccionario contiene informacion sobre X libro
 dictionary_list =  [
@@ -53,20 +54,21 @@ while True:
     else:
         # Si ingreso 1 se ordena por en funcion del nombre del autor
         if option == 1:
-            dictionary_list = funciones.by_author(dictionary_list)
+            dictionary_list = funciones.bubble_sort_3(dictionary_list, "author")
             print("\n")
             for book in dictionary_list:
                 print(f"- {book['author']}: {book['name']}, ({book['year']})")
+
         # Si ingreso 2 se ordena por año de publicacion
         elif option == 2:
-            dictionary_list = funciones.by_year(dictionary_list)
+            dictionary_list = funciones.bubble_sort_3(dictionary_list, "year")
             print("\n")
             for book in dictionary_list:
                 print(f"- {book['year']}: {book['name']}, de {book['author']}")
         # Si ingreso 3 el programa finaliza
         elif option == 3:
             break
-
+"""
 
 """4. Escribe un programa que tome una lista de cadenas como entrada y las ordene en orden ascendente según su longitud. Puedes utilizar el método de ordenamiento de inserción.
 """
