@@ -30,24 +30,16 @@ def selection_sort(arr):
         # Intercambiar el elemento mínimo encontrado con el primer elemento sin ordenar
         arr[i], arr[min_index] = arr[min_index], arr[i]
 
-#Funciones para ordenar diccionario mediante metodo de ordenamiento BURBUJA
-def by_author(dictionary):
+#Funcion para ordenar diccionario mediante metodo de ordenamiento BURBUJA
+def bubble_sort_3(dictionary, key):
 
     n = len(dictionary)
     for i in range(n - 1):
         for j in range(0, n - i - 1):
-            if dictionary[j]["author"] > dictionary[j + 1]["author"]:
+            if dictionary[j][key] > dictionary[j + 1][key]:
                 dictionary[j], dictionary[j + 1] = dictionary[j + 1], dictionary[j]
     return dictionary
 
-def by_year(dictionary):
-
-    n = len(dictionary)
-    for i in range(n - 1):
-        for j in range(0, n - i - 1):
-            if dictionary[j]["year"] > dictionary[j + 1]["year"]:
-                dictionary[j], dictionary[j + 1] = dictionary[j + 1], dictionary[j]
-    return dictionary
 # Función para ordenamiento INSERT SORT
 def insertion_sort(arr):
     n = len(arr)
