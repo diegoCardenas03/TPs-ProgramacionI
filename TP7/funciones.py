@@ -30,26 +30,24 @@ def selection_sort(arr):
         # Intercambiar el elemento mínimo encontrado con el primer elemento sin ordenar
         arr[i], arr[min_index] = arr[min_index], arr[i]
 
-#funcion para ordenamiento selection sort utilizando diccionarios
-def selection_sort_dic(arr, key):
-    n = len(arr)
+#Funciones para ordenar diccionario mediante metodo de ordenamiento BURBUJA
+def by_author(dictionary):
 
-    # Crear una copia de la lista de diccionarios para no modificar la original
-    sorted_arr = arr.copy()
+    n = len(dictionary)
+    for i in range(n - 1):
+        for j in range(0, n - i - 1):
+            if dictionary[j]["author"] > dictionary[j + 1]["author"]:
+                dictionary[j], dictionary[j + 1] = dictionary[j + 1], dictionary[j]
+    return dictionary
 
-    # Iterar a través de todos los elementos de la lista de diccionarios
-    for i in range(n):
-        # Encontrar el índice del elemento mínimo en la lista sin ordenar
-        min_index = i
-        for j in range(i + 1, n):
-            if sorted_arr[j][key] < sorted_arr[min_index][key]:
-                min_index = j
+def by_year(dictionary):
 
-        # Intercambiar el elemento mínimo encontrado con el primer elemento sin ordenar
-        sorted_arr[i], sorted_arr[min_index] = sorted_arr[min_index], sorted_arr[i]
-
-    # Devolver la lista ordenada
-    return sorted_arr
+    n = len(dictionary)
+    for i in range(n - 1):
+        for j in range(0, n - i - 1):
+            if dictionary[j]["year"] > dictionary[j + 1]["year"]:
+                dictionary[j], dictionary[j + 1] = dictionary[j + 1], dictionary[j]
+    return dictionary
 # Función para ordenamiento INSERT SORT
 def insertion_sort(arr):
     n = len(arr)
