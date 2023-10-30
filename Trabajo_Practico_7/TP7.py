@@ -31,13 +31,14 @@ while True:
     else:
         # Si ingreso 1 se ordena por en funcion del nombre del autor
         if option == 1:
-            dictionary_list = funciones.by_author(dictionary_list)
+            dictionary_list = funciones.bubble_sort_3(dictionary_list, "author")
             print("\n")
             for book in dictionary_list:
                 print(f"- {book['author']}: {book['name']}, ({book['year']})")
+
         # Si ingreso 2 se ordena por año de publicacion
         elif option == 2:
-            dictionary_list = funciones.by_year(dictionary_list)
+            dictionary_list = funciones.bubble_sort_3(dictionary_list, "year")
             print("\n")
             for book in dictionary_list:
                 print(f"- {book['year']}: {book['name']}, de {book['author']}")
