@@ -1,3 +1,4 @@
+import funciones
 
 """1. Solicitar al usuario que ingrese números, estos deben guardarse en una lista. Para finalizar el usuario debe ingresar 0, el cual no debe guardarse."""
 """new_list = []
@@ -46,7 +47,7 @@ for number in set(new_list):
 
 print(unique_tuples)"""
 """6. Solicitar al usuario que ingrese los nombres de pila de los alumnos de nivel primario de una escuela, finalizando al ingresar ‘x’. A continuación, 
-solicitar que ingrese los nombres de los alumnos de nivel secundario, finalizando al ingresar ‘x’.
+solicitar que ingrese los nombres de los alumnos de nivel secundario, finalizando al ingresar 'x'.
 a. Informar los nombres de todos los alumnos de nivel primario y de los de nivel secundario, sin repeticiones.
 b. Informar qué nombres se repiten entre los alumnos de nivel primario y secundario.
 c. Informar qué nombres de nivel primario no se repiten en los de nivel secundario.
@@ -84,6 +85,7 @@ print(names_unique_to_primary)
 consiste en un tablero de cartas boca abajo y el objetivo es encontrar todas las parejas de cartas iguales."""
 # Ejercicio 9
 
+"""
 # Parejas
 couples = [
         ["AA", "BB", "CC", "DD"],
@@ -158,7 +160,7 @@ while True:
 
 
 #Ejercicio 11
-"""11. Escribir un programa que guarde en una variable el diccionario {'Euro':'€', 'Dollar':'$', 'Yen':'¥'},
+""11. Escribir un programa que guarde en una variable el diccionario {'Euro':'€', 'Dollar':'$', 'Yen':'¥'},
 pregunte al usuario por una divisa y muestre su símbolo o un mensaje de aviso si la divisa no está en
 el diccionario."""
 
