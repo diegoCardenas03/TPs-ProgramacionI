@@ -264,5 +264,5 @@ if fruit.lower() in fruits:
 
 else:
 
-    print("La fruta ingresa no se encuentra")"""
+    print("La fruta ingresada no se encuentra")"""
 
