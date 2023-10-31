@@ -5,11 +5,13 @@ import funciones
 """9.	Escribir un programa que simule el juego clásico de Memoria (Memotest) utilizando matrices. El juego 
 consiste en un tablero de cartas boca abajo y el objetivo es encontrar todas las parejas de cartas iguales."""
 # Ejercicio 9
+
+# Parejas
 couples = [
         ["AA", "BB", "CC", "DD"],
         ["FF", "AA", "EE","FF"],
         ["BB", "DD", "EE", "CC"]]
-
+# Cartas
 cards = [
         ["㋡", "㋡", "㋡", "㋡"],
         ["㋡", "㋡", "㋡", "㋡"],
@@ -22,7 +24,7 @@ print("** Encuentre las 6 parejas del siguente tablero indicando las respectivas
 print("** ATENCION: Los indices tanto para fila y columna van desde 0 a 3")
 while True:
     # Muestro el estado de las cartas adivinadas (o no)
-    print("* Estado actual *")
+    print("\n* Estado actual *")
     for row in cards:
         for element in row:
             print(element, end= "  ")
@@ -33,20 +35,24 @@ while True:
         print("\n** PRIMERA CARTA:")
         row_1 = int(input("- Fila: "))
         column_1 = int(input("- Columna: "))
+        # Valido que la posicion de la primera carta sea valida
         valid_index = funciones.valid_index(row_1, column_1)
 
         if valid_index == False:
             continue
+        
+        while True:
+            print("** SEGUNDA CARTA:")
+            row_2 = int(input("- Fila: "))
+            column_2 = int(input("- Columna: "))
+            # Valido que la posicion de la segunda carta sea valida
+            valid_index = funciones.valid_index(row_2, column_2)
 
-        print("** SEGUNDA CARTA:")
-        row_2 = int(input("- Fila: "))
-        column_2 = int(input("- Columna: "))
-        valid_index = funciones.valid_index(row_2, column_2)
-
-        if valid_index == False:
-            continue
-        else:
-            break
+            if valid_index == False:
+                continue
+            else:
+                break
+        break
 
     # Verifico si se ha acertado
     if (row_1 == row_2) and (column_1 == column_2):
@@ -63,4 +69,11 @@ while True:
 
     if count == 6:
         print("\n **** JUEGO TERMINADO, ¡HA ENCONTRADO TODAS LAS PAREJAS ****")
+
+        # Muestro el resultado final una vez mas
+
+        for row in cards:
+            for element in row:
+                print(element, end= "  ")
+            print()
         break
