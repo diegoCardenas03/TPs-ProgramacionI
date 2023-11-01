@@ -6,6 +6,8 @@ import funciones
 consiste en un tablero de cartas boca abajo y el objetivo es encontrar todas las parejas de cartas iguales."""
 # Ejercicio 9
 
+"""
+
 # Parejas
 couples = [
         ["AA", "BB", "CC", "DD"],
@@ -77,3 +79,31 @@ while True:
                 print(element, end= "  ")
             print()
         break
+"""
+
+"""10.	Teniendo una matriz cuadrada de cualquier dimensión, obtener lo siguiente:
+a.	la diagonal principal.
+b.	la diagonal inversa."""
+# Ejercicio 10
+
+# Matriz:
+default_array = [
+                ["A", "B", "C"],
+                ["D", "E", "F"],
+                ["G", "H", "I"]]
+
+print("** Matriz con la que se trabajará:")
+for row in default_array:
+    for element in row:
+        print(element, end= "   ")
+    print()
+
+# Obteniendo la diagonal principal
+print("\n** Elementos de la diagonal principal de la matriz:")
+for i in range(3):
+    print(default_array[i][i], end= "  ")
+
+# Obteniendo la diagonal inversa
+print("\n** Elementos de la diagonal inversa de la matriz:")
+for i in range(3):
+    print(default_array[i][2 - i], end= "  ")
