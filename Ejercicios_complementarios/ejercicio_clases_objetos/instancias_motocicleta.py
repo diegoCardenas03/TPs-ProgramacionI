@@ -25,6 +25,7 @@ while True:
             print("La opcion ingresada no se encuentra en nuestro catalogo, ingrese nuevamente")
 
     # Pruebo el motor
+    print("----------------------------------")
     print("\n*** Prueba de motor ***")
     while True:
         while True:
@@ -55,8 +56,36 @@ while True:
     # Pregunto si quiere ver otra motocicleta:
     finish = int(input("\n** Desea probar otra motocicleta del catálogo? \n1. SI \n2. No, salir\n"))
     if finish == 1:
+        print("----------------------------------")
         continue
     elif finish == 2:
         break
     else:
         print("Ingrese una opcion válida")
+
+# Mostrada la ficha tecnica y terminadas las pruebas del motor, muestro el precio
+moto_1.default_price = 10000
+moto_2.default_price = 8000
+
+print("*** PRECIOS ***")
+print(f"El precio de la última motocicleta consultada ({current_motorcycle.brand} {current_motorcycle.model}) es de USD ${current_motorcycle.default_price}")
+
+# Consultar el precio mediante metodo de la clase
+while True:
+    choice = int(input(f"\n* Para consultar el precio de una de las motocicletas en específico: \n1. {moto_1.brand} {moto_1.model} \n2. {moto_2.brand} {moto_2.model}\n"))
+
+    if choice == 1:
+        current_motorcycle = moto_1
+        break
+    elif choice == 2:
+        current_motorcycle = moto_2
+        break
+    else:
+        print("Ingrese una opcion válida")
+
+# Segun la moto seleccionada
+precio_moto = current_motorcycle.price_checking()
+print(f"El precio de la motocicleta {current_motorcycle.brand} {current_motorcycle.model} es de USD ${precio_moto}")
+
+
+
