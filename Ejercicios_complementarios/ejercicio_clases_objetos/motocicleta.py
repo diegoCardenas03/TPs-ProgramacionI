@@ -3,6 +3,8 @@ class Motocicleta:
     condition = "Nueva"
     engine = False 
 
+    # Precio por defecto
+    default_price = 0
     # Atributos
     def __init__(self, color, license_plate, fuel_liters, wheels, brand, model, manufacture_date, top_speed, weight):
         self.color = color
@@ -41,4 +43,8 @@ class Motocicleta:
         print(f"- Numero de ruedas: {self.wheels}")
         print(f"\n---- PATENTE: [{self.license_plate}]")
         print(f"---- ESTADO: {self.condition}")
+
+    # Consultar precio
+    def price_checking(self):
+        return self.default_price
 
